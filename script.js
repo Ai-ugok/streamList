@@ -46,7 +46,9 @@ PetiteVue.createApp({
     //   gameS.insertBefore(op2, op1.nextElementSibling);
     // }
 
+    if (this.streamer == 'mssp') {
 
+    }
   },
 
   submit() {

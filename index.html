@@ -10,7 +10,7 @@
   <h1>実況リスト</h1>
   
   <h2>ニコニコ動画</h2>
-  <select v-model="streamer" @change="change" id="streamerSelect">
+  <select v-model="streamer" id="streamerSelect">
     <option value="" selected disabled></option>
     <option value="mssp">MSSP</option>
     <option value="adults">いい大人達</option>
@@ -37,7 +37,7 @@
     <option value="yy">わいわい</option>
     <option value="yymaeda">わいわい&まえだくん</option>
   </select><br>
-  <select id="gameSelect" v-model="game">
+  <select id="gameSelect" v-model="game" @change="change">
     <option value="" selected disabled id="option0"></option>
     <option value="newmario" disabled>Newスーパーマリオブラザーズ</option>
     <option value="mario3d" disabled>スーパーマリオ3Dワールド</option>
