@@ -1,6 +1,7 @@
 'use strict'
 
 // 必要な要素を取ってくる
+// ↓ニコニコ動画
 const NstreamerS = document.getElementById('streamerSelect-nico');
 const NgameS = document.getElementById('gameSelect-nico');
 const op0 = document.getElementById('option0');
@@ -11,6 +12,7 @@ const NsecondS = document.getElementById('secondSelect-nico');
 // ストレージ
 const storage = sessionStorage;
 document.addEventListener('DOMContentLoaded', () => {
+  // ↓ニコニコ動画
   const NstreamerData = storage.streamerNico;
   const NgameData = storage.gameNico;
   const NpartData = storage.partNumNico;
@@ -24,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 PetiteVue.createApp({
+  // ↓ニコニコ動画
   streamerNico: '',
   gameNico: '',
   partNumNico: '',
@@ -37,6 +40,7 @@ PetiteVue.createApp({
     // storage.store = this.minute;
     // storage.store = this.second;
 
+    // ↓ニコニコ動画
     storage.setItem('streamerNico', this.streamerNico);
     storage.setItem('gameNico', this.gameNico);
     storage.setItem('partNumNico', this.partNumNico);
@@ -45,6 +49,8 @@ PetiteVue.createApp({
   },
 
   remove() {
+
+    // ↓ニコニコ動画
     storage.removeItem('streamerNico');
     storage.removeItem('gameNico');
     storage.removeItem('partNumNico');

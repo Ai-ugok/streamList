@@ -88,7 +88,7 @@
     <option value="DQ5">ドラゴンクエストⅤ</option>
     <option value="dragons">ドラゴンズレア</option>
     <option value="witches">トラブル☆ウィッチーズねぉ！</option>
-    <option value="notore">脳を鍛える大人のDSトレーニング</option>
+    <option value="notore">脳トレ</option>
     <option value="bomb">爆弾解体ゲーム</option>
     <option value="pokesuna">ポケモンスナップ</option>
     <option value="pokken">ポッ拳</option>
@@ -111,20 +111,103 @@
   <button @click="remove">削除</button>
 
   <h2>YouTube</h2>
+  <select v-model="streamerYou" id="streamerSelect-you">
+    <option value="" selected disabled></option>
+    <option value="kyunnzziro">九ななズズいろ - 混ぜメン</option>
+    <option value="kiyo">キヨ</option>
+    <option value="sugiran">すぎ蘭 - ナポリの男たち</option>
+    <option value="sugiru">すぎる</option>
+    <option value="napori">ナポリの男たち</option>
+    <option value="pokky">ポッキー</option>
+    <option value="yuyuta">ゆゆうた</option>
+    <option value="rantan">蘭たん</option>
+    <option value="ran8">蘭たん&hacchi</option>
+    <option value="reto">レトルト</option>
+    <option value="yy">わいわい</option>
+  </select><br>
+  <select id="gameSelect-you" v-model="gameYou">
+    <option value="" id="option0" selected disabled></option>
+    <option value="8ban">8番出口</option>
+    <option value="8onpu">8分音符ちゃん♪</option>
+    <option value="60p">60 Parsecs!</option>
+    <option value="60s">60 Seconds!</option>
+    <option value="frog">Amazing Frog?</option>
+    <option value="apex">APEX</option>
+    <option value="duck">Bouncing Duck Simulator</option>
+    <option value="gpt">chatGPT</option>
+    <option value="deltarune">Deltarune</option>
+    <option value="D&G">Draw & Guess</option>
+    <option value="exile">EXILE</option>
+    <option value="gmod">Garry's Mod</option>
+    <option value="GTG">Good Time Garden</option>
+    <option value="HFF">Human: Fall Flat</option>
+    <option value="inside">INSIDE</option>
+    <option value="LIS">Life is Strange</option>
+    <option value="LISBtS">Life is Strange: Before the Storm</option>
+    <option value="limbo">LIMBO</option>
+    <option value="LN">Little Nightmares</option>
+    <option value="MOM">MAN OF MEDAN</option>
+    <option value="MC">Minecraft</option>
+    <option value="mother">Mother Simulator</option>
+    <option value="PA">Party Animals</option>
+    <option value="yurei">Phasmophobia</option>
+    <option value="PDTA">Please Don't Touch Anything</option>
+    <option value="P&P">Plug & Play</option>
+    <option value="fil">Police Simulator Patrol Duty</option>
+    <option value="pubg">PUBG</option>
+    <option value="raft">RAFT</option>
+    <option value="rock">ROCK of AGES Ⅱ</option>
+    <option value="skate3">Skate3</option>
+    <option value="slime">Slime Rancher</option>
+    <option value="tea">Tea Party Simulator</option>
+    <option value="sims4">The Sims 4</option>
+    <option value="undertale">Undertale</option>
+    <option value="aooni2">青鬼2</option>
+    <option value="atsumori">あつまれどうぶつの森</option>
+    <option value="utan">うーたんを塗るゲーム</option>
+    <option value="oekaki">おえかきの森</option>
+    <option value="octo">オクトダッド</option>
+    <option value="ope">オペレーターズサイド</option>
+    <option value="hidekazu">利き秀和</option>
+    <option value="catherine">キャサリン</option>
+    <option value="story">ケータイ小説</option>
+    <option value="wolf">人狼</option>
+    <option value="spl">スプラトゥーン</option>
+    <option value="spl2">スプラトゥーン2</option>
+    <option value="tamago">たまごっちのプチプチおみせっち</option>
+    <option value="earth4.1">地球防衛軍4.1</option>
+    <option value="earth5">地球防衛軍5</option>
+    <option value="choshogi">超将棋</option>
+    <option value="tsukkomi">ツッコマニア</option>
+    <option value="debuneko">でぶ猫クラフト</option>
+    <option value="doumorie+">どうぶつの森e+</option>
+    <option value="gs2">ときめきメモリアルGirl's Side 2nd Kiss</option>
+    <option value="gs3">ときめきメモリアルGirl's Side 3rd Story</option>
+    <option value="gs4">ときめきメモリアルGirl's Side 4th Heart</option>
+    <option value="tomokore">トモダチコレクション</option>
+    <option value="notore">脳トレ</option>
+    <option value="bomb">爆弾解体ゲーム</option>
+    <option value="pikmin3">ピクミン3</option>
+    <option value="precure">プリキュア</option>
+    <option value="matsuken">マツケンアリマ</option>
+    <option value="maripaSS">マリオパーティスーパースターズ</option>
+    <option value="marime2">マリオメーカー2</option>
+    <option value="manga">まんが一本道〆</option>
+    <option value="konnan">名探偵コンナン君</option>
+    <option value="mezon">メゾン・ド・魔王</option>
+    <option value="moji">もじぴったんアンコール</option>
+    <option value="rhythm">リズム天国</option>
+  </select><br>
+  Part<input type="number" min="1" max="77" value="0" v-model="partNumNico" id="partSelect-nico">
   <select>
     <option value="" selected disabled></option>
-    <option>九ななズズいろ - 混ぜメン</option>
-    <option>キヨ</option>
-    <option>すぎ蘭 - ナポリの男たち</option>
-    <option>すぎる</option>
-    <option>ナポリの男たち</option>
-    <option>ポッキー</option>
-    <option>ゆゆうた</option>
-    <option>蘭たん</option>
-    <option>蘭たん&hacchi</option>
-    <option>レトルト</option>
-    <option>わいわい</option>
+    <option></option>
   </select>
+  <input type="number" min="0" max="59" value="0" v-model="minuteNico" id="minuteSelect-nico">：
+  <input type="number" min="0" max="59" value="0" v-model="secondNico" id="secondSelect-nico"><br>
+  <button type="submit" @click="submit"><img src="imgs/check.png" width="60px" height="60px"></button>
+
+  <button @click="remove">削除</button>
 
   <script src="https://unpkg.com/petite-vue"></script>
   <script src="script.js"></script>
