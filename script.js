@@ -4,11 +4,9 @@
 // ↓ニコニコ動画
 const NstreamerS = document.getElementById('streamerSelect-nico');
 const NgameS = document.getElementById('gameSelect-nico');
-const op0 = document.getElementById('option0');
 const NpartS = document.getElementById('partSelect-nico');
 const NminuteS = document.getElementById('minuteSelect-nico');
 const NsecondS = document.getElementById('secondSelect-nico');
-const sNT = document.getElementById('streamerNicoText');
 
 // ↓YouTube
 const YstreamerS = document.getElementById('streamerSelect-you');
@@ -19,6 +17,7 @@ const YsecondS = document.getElementById('secondSelect-you');
 
 // ストレージ
 const storage = sessionStorage;
+// リロードしたら・・・
 document.addEventListener('DOMContentLoaded', () => {
 
   // ↓ニコニコ動画
@@ -63,14 +62,13 @@ PetiteVue.createApp({
   minuteYou: '',
   secondYou: '',
 
+  // 確定ボタンが押されたら・・・
   submit() {
     // storage.store = this.streamer;
     // storage.store = this.game;
     // storage.store = this.partNum;
     // storage.store = this.minute;
     // storage.store = this.second;
-
-    console.log(this.streamerNico)
 
     // ↓ニコニコ動画
     storage.setItem('streamerNico', this.streamerNico);
@@ -88,6 +86,7 @@ PetiteVue.createApp({
 
   },
 
+  // 削除ボタンが押されたら・・・
   remove() {
 
     // ↓ニコニコ動画

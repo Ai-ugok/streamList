@@ -1,1 +1,13 @@
-@media screen and (max-width: 480px) {}
+@media screen and (max-width: 480px) {
+
+  @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Hachi+Maru+Pop&family=New+Tegomin&family=Zen+Kurenaido&display=swap');
+
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    font-family: "DotGothic16", sans-serif;
+  }
+}

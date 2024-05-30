@@ -10,6 +10,7 @@
   <h1>実況リスト</h1>
   
   <h2>ニコニコ動画</h2>
+  <!-- ニコニコ動画の実況者選択 -->
   <select v-model="streamerNico" id="streamerSelect-nico">
     <option value="" selected disabled></option>
     <option value="mssp">MSSP</option>
@@ -37,6 +38,7 @@
     <option value="yy">わいわい</option>
     <option value="yymaeda">わいわい&まえだくん</option>
   </select><br>
+  <!-- ニコニコ動画のゲーム選択 -->
   <select id="gameSelect-nico" v-model="gameNico">
     <option value="" id="option0" selected disabled></option>
     <option value="abzu">ABZU</option>
@@ -99,18 +101,24 @@
     <option value="rhythm">リズム天国</option>
     <option value="GM">わがままファッション GIRLS MODE よくばり宣言！</option>
   </select><br>
+  <!-- ニコニコ動画のパート数選択 -->
   Part<input type="number" min="1" max="77" value="0" v-model="partNumNico" id="partSelect-nico">
+  <!-- ニコニコ動画のパート数（その他の表記）選択 -->
   <select>
     <option value="" selected disabled></option>
     <option></option>
   </select>
+  <!-- ニコニコ動画の分選択 -->
   <input type="number" min="0" max="59" value="0" v-model="minuteNico" id="minuteSelect-nico">：
+  <!-- ニコニコ動画の秒選択 -->
   <input type="number" min="0" max="59" value="0" v-model="secondNico" id="secondSelect-nico"><br>
+  <!-- ニコニコ動画の確定ボタン -->
   <button type="submit" @click="submit"><img src="imgs/check.png" width="60px" height="60px"></button>
-
+  <!-- ニコニコ動画の削除ボタン -->
   <button @click="remove">削除</button>
 
   <h2>YouTube</h2>
+  <!-- YouTubeの実況者選択 -->
   <select v-model="streamerYou" id="streamerSelect-you">
     <option value="" selected disabled></option>
     <option value="kyunnzziro">九ななズズいろ - 混ぜメン</option>
@@ -125,6 +133,7 @@
     <option value="reto">レトルト</option>
     <option value="yy">わいわい</option>
   </select><br>
+  <!-- YouTubeのゲーム選択 -->
   <select id="gameSelect-you" v-model="gameYou">
     <option value="" id="option0" selected disabled></option>
     <option value="8ban">8番出口</option>
@@ -198,15 +207,20 @@
     <option value="moji">もじぴったんアンコール</option>
     <option value="rhythm">リズム天国</option>
   </select><br>
+  <!-- YouTubeのパート数選択 -->
   Part<input type="number" min="1" max="77" value="0" v-model="partNumYou" id="partSelect-you">
+  <!-- YouTubeのパート数（その他の表記）選択 -->
   <select>
     <option value="" selected disabled></option>
     <option></option>
   </select>
+  <!-- YouTubeの分選択 -->
   <input type="number" min="0" max="59" value="0" v-model="minuteYou" id="minuteSelect-you">：
+  <!-- YouTubeの秒選択 -->
   <input type="number" min="0" max="59" value="0" v-model="secondYou" id="secondSelect-you"><br>
+  <!-- YouTubeの確定ボタン -->
   <button type="submit" @click="submit"><img src="imgs/check.png" width="60px" height="60px"></button>
-
+  <!-- YouTubeの削除ボタン -->
   <button @click="remove">削除</button>
 
   <script src="https://unpkg.com/petite-vue"></script>
