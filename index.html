@@ -10,7 +10,7 @@
   <h1>実況リスト</h1>
   
   <h2>ニコニコ動画</h2>
-  <select v-model="streamer" id="streamerSelect">
+  <select v-model="streamerNico" id="streamerSelect-nico">
     <option value="" selected disabled></option>
     <option value="mssp">MSSP</option>
     <option value="adults">いい大人達</option>
@@ -37,7 +37,7 @@
     <option value="yy">わいわい</option>
     <option value="yymaeda">わいわい&まえだくん</option>
   </select><br>
-  <select id="gameSelect" v-model="game">
+  <select id="gameSelect-nico" v-model="gameNico">
     <option value="" id="option0" selected disabled></option>
     <option value="abzu">ABZU</option>
     <option value="besiege">Besiege</option>
@@ -99,13 +99,13 @@
     <option value="rhythm">リズム天国</option>
     <option value="GM">わがままファッション GIRLS MODE よくばり宣言！</option>
   </select><br>
-  Part<input type="number" min="1" max="77" value="0" v-model="partNum" id="partSelect">
+  Part<input type="number" min="1" max="77" value="0" v-model="partNumNico" id="partSelect-nico">
   <select>
     <option value="" selected disabled></option>
     <option></option>
   </select>
-  <input type="number" min="0" max="59" value="0" v-model="minute" id="minuteSelect">：
-  <input type="number" min="0" max="59" value="0" v-model="second" id="secondSelect"><br>
+  <input type="number" min="0" max="59" value="0" v-model="minuteNico" id="minuteSelect-nico">：
+  <input type="number" min="0" max="59" value="0" v-model="secondNico" id="secondSelect-nico"><br>
   <button type="submit" @click="submit"><img src="imgs/check.png" width="60px" height="60px"></button>
 
   <button @click="remove">削除</button>
