@@ -198,13 +198,13 @@
     <option value="moji">もじぴったんアンコール</option>
     <option value="rhythm">リズム天国</option>
   </select><br>
-  Part<input type="number" min="1" max="77" value="0" v-model="partNumNico" id="partSelect-nico">
+  Part<input type="number" min="1" max="77" value="0" v-model="partNumYou" id="partSelect-you">
   <select>
     <option value="" selected disabled></option>
     <option></option>
   </select>
-  <input type="number" min="0" max="59" value="0" v-model="minuteNico" id="minuteSelect-nico">：
-  <input type="number" min="0" max="59" value="0" v-model="secondNico" id="secondSelect-nico"><br>
+  <input type="number" min="0" max="59" value="0" v-model="minuteYou" id="minuteSelect-you">：
+  <input type="number" min="0" max="59" value="0" v-model="secondYou" id="secondSelect-you"><br>
   <button type="submit" @click="submit"><img src="imgs/check.png" width="60px" height="60px"></button>
 
   <button @click="remove">削除</button>
