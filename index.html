@@ -37,90 +37,72 @@
     <option value="yy">わいわい</option>
     <option value="yymaeda">わいわい&まえだくん</option>
   </select><br>
-  <select id="gameSelect" v-model="game" @change="change">
-    <option value="" selected disabled id="option0"></option>
-    <option value="newmario" disabled>Newスーパーマリオブラザーズ</option>
-    <option value="mario3d" disabled>スーパーマリオ3Dワールド</option>
+  <select id="gameSelect" v-model="game">
+    <option value="" id="option0" selected disabled></option>
+    <option value="abzu">ABZU</option>
+    <option value="besiege">Besiege</option>
+    <option value="calling">calling</option>
+    <option value="FNaF">Five Nights at Freddy's</option>
+    <option value="inside">INSIDE</option>
+    <option value="limbo">LIMBO</option>
+    <option value="LN">Little Nightmares</option>
+    <option value="MC">Minecraft</option>
+    <option value="newmario">Newスーパーマリオブラザーズ</option>
+    <option value="aquarium">themeAQUARIUM</option>
+    <option value="undertale">Undertale</option>
+    <option value="imas">アイドルマスター</option>
+    <option value="aooni">青鬼</option>
+    <option value="analog">アナログゲーム集</option>
+    <option value="amagami">アマガミ</option>
+    <option value="anpanman">アンパンマンにこにこパーティ</option>
+    <option value="octo">オクトダッド</option>
+    <option value="OC">オーバークック</option>
+    <option value="ka2">蚊2</option>
+    <option value="kanken">漢検Wii</option>
+    <option value="goemon">がんばれゴエモン2奇天烈将軍マッギネス</option>
+    <option value="gift">ギフトピア</option>
+    <option value="catherine">キャサリン</option>
+    <option value="kyoe">巨影都市</option>
+    <option value="kumatomo">クマ・トモ</option>
+    <option value="kenka">喧嘩番長</option>
+    <option value="quiz">子育てクイズもっとマイエンジェル</option>
+    <option value="wolf">人狼</option>
+    <option value="seaman">シーマン</option>
+    <option value="seaman2">シーマン2</option>
+    <option value="spl">スプラトゥーン</option>
+    <option value="spl2">スプラトゥーン2</option>
+    <option value="mario3d">スーパーマリオ3Dワールド</option>
+    <option value="mario64">スーパーマリオ64</option>
+    <option value="juon">呪怨</option>
+    <option value="help">絶体絶命都市</option>
+    <option value="zero">零</option>
+    <option value="charisou">チャリ走</option>
+    <option value="doumori">どうぶつの森</option>
+    <option value="amiibo">どうぶつの森アミーボフェスティバル</option>
+    <option value="gs2">ときめきメモリアルGirl's Side 2nd Kiss</option>
+    <option value="tobimori">とびだせどうぶつの森</option>
+    <option value="tomokore">トモダチコレクション</option>
+    <option value="DQ1">ドラゴンクエストⅠ</option>
+    <option value="DQ2">ドラゴンクエストⅡ</option>
+    <option value="DQ3">ドラゴンクエストⅢ</option>
+    <option value="DQ5">ドラゴンクエストⅤ</option>
+    <option value="dragons">ドラゴンズレア</option>
+    <option value="witches">トラブル☆ウィッチーズねぉ！</option>
+    <option value="notore">脳を鍛える大人のDSトレーニング</option>
+    <option value="bomb">爆弾解体ゲーム</option>
+    <option value="pokesuna">ポケモンスナップ</option>
+    <option value="pokken">ポッ拳</option>
+    <option value="machimori">街へいこうよどうぶつの森</option>
+    <option value="marika8">マリオカート8</option>
+    <option value="maripa9">マリオパーティ9</option>
+    <option value="yawaraka">やわらかあたま塾</option>
+    <option value="rhythm">リズム天国</option>
+    <option value="GM">わがままファッション GIRLS MODE よくばり宣言！</option>
   </select><br>
-  Part<select v-model="partNum" id="partSelect">
+  Part<input type="number" min="1" max="77" value="0" v-model="partNum" id="partSelect">
+  <select>
     <option value="" selected disabled></option>
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-    <option>5</option>
-    <option>6</option>
-    <option>7</option>
-    <option>8</option>
-    <option>9</option>
-    <option>10</option>
-    <option>11</option>
-    <option>12</option>
-    <option>13</option>
-    <option>14</option>
-    <option>15</option>
-    <option>16</option>
-    <option>17</option>
-    <option>18</option>
-    <option>19</option>
-    <option>20</option>
-    <option>21</option>
-    <option>22</option>
-    <option>23</option>
-    <option>24</option>
-    <option>25</option>
-    <option>26</option>
-    <option>27</option>
-    <option>28</option>
-    <option>29</option>
-    <option>30</option>
-    <option>31</option>
-    <option>32</option>
-    <option>33</option>
-    <option>34</option>
-    <option>35</option>
-    <option>36</option>
-    <option>37</option>
-    <option>38</option>
-    <option>39</option>
-    <option>40</option>
-    <option>41</option>
-    <option>42</option>
-    <option>43</option>
-    <option>44</option>
-    <option>45</option>
-    <option>46</option>
-    <option>47</option>
-    <option>48</option>
-    <option>49</option>
-    <option>50</option>
-    <option>51</option>
-    <option>52</option>
-    <option>53</option>
-    <option>54</option>
-    <option>55</option>
-    <option>56</option>
-    <option>57</option>
-    <option>58</option>
-    <option>59</option>
-    <option>60</option>
-    <option>61</option>
-    <option>62</option>
-    <option>63</option>
-    <option>64</option>
-    <option>65</option>
-    <option>66</option>
-    <option>67</option>
-    <option>68</option>
-    <option>69</option>
-    <option>70</option>
-    <option>71</option>
-    <option>72</option>
-    <option>73</option>
-    <option>74</option>
-    <option>75</option>
-    <option>76</option>
-    <option>77</option>
+    <option></option>
   </select>
   <input type="number" min="0" max="59" value="0" v-model="minute" id="minuteSelect">：
   <input type="number" min="0" max="59" value="0" v-model="second" id="secondSelect"><br>

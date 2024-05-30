@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const minuteData = storage.minute;
   const secondData = storage.second;
   streamerS.value = streamerData;
-  op0.value = gameData;
+  gameS.value = gameData;
   partS.value = partData;
   minuteS.value = minuteData;
   secondS.value = secondData;
@@ -29,27 +29,6 @@ PetiteVue.createApp({
   partNum: '',
   minute: '',
   second: '',
-
-  change() {
-    // gameSelect要素内の子要素(option要素)を全て削除
-    // gameS.innerHTML = '';
-
-    // if (this.streamer == 'mssp') {
-    //   const op1 = document.createElement('option');
-    //   op1.textContent = 'NewスーパーマリオブラザーズWii';
-    //   op1.value = 'newmario';
-    //   gameS.insertBefore(op1, op0.nextElementSibling);
-
-    //   const op2 = document.createElement('option');
-    //   op2.textContent = 'スーパーマリオ3Dワールド';
-    //   op2.value = 'mario3d';
-    //   gameS.insertBefore(op2, op1.nextElementSibling);
-    // }
-
-    if (this.streamer == 'mssp') {
-
-    }
-  },
 
   submit() {
     // storage.store = this.streamer;
