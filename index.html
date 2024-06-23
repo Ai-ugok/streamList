@@ -11,6 +11,7 @@
 <body>
   <h1>実況リスト</h1>
 
+  <img src="imgs/niconico.png">
   <h2>ニコニコ動画</h2>
   <!-- ニコニコ動画の実況者選択 -->
   <select v-model="streamerNico" id="streamerSelect-nico">
@@ -104,9 +105,9 @@
     <option value="GM">わがままファッション GIRLS MODE よくばり宣言！</option>
   </select><br>
   <!-- ニコニコ動画のパート数選択 -->
-  Part<input type="number" min="1" max="77" value="0" v-model="partNumNico" id="partSelect-nico">
+  　Part<input type="number" min="1" max="77" value="0" v-model="partNumNico" id="partSelect-nico">
   <!-- ニコニコ動画のLASTなどの選択 -->
-  <input type="text" v-model="lastNico" id="lastSelect-nico">
+  <input type="text" v-model="lastNico" id="lastSelect-nico"><br>
   <!-- ニコニコ動画の分選択 -->
   <input type="number" min="0" max="59" value="0" v-model="minuteNico" id="minuteSelect-nico">：
   <!-- ニコニコ動画の秒選択 -->
@@ -114,8 +115,9 @@
   <!-- ニコニコ動画の確定ボタン -->
   <button type="submit" @click="submit"><img src="imgs/check.png" width="60px" height="60px"></button>
   <!-- ニコニコ動画の削除ボタン -->
-  <button @click="remove">削除</button>
+  <button @click="remove">削除</button><br>
 
+  <img src="imgs/youtube.png">
   <h2>YouTube</h2>
   <!-- YouTubeの実況者選択 -->
   <select v-model="streamerYou" id="streamerSelect-you">
@@ -207,9 +209,9 @@
     <option value="rhythm">リズム天国</option>
   </select><br>
   <!-- YouTubeのパート数選択 -->
-  Part<input type="number" min="1" max="77" value="0" v-model="partNumYou" id="partSelect-you">
+  　Part<input type="number" min="1" max="77" value="0" v-model="partNumYou" id="partSelect-you">
   <!-- YouTubeのLASTなどの選択 -->
-  <input type="text" v-model="lastYou" id="lastSelect-you">
+  <input type="text" v-model="lastYou" id="lastSelect-you"><br>
   <!-- YouTubeの時選択 -->
   <input type="number" min="0" max="2" value="0" v-model="hourYou" id="hourSelect-you">：
   <!-- YouTubeの分選択 -->
