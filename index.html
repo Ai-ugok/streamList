@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>実況リスト</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <h1>実況リスト</h1>
-  
+
   <h2>ニコニコ動画</h2>
   <!-- ニコニコ動画の実況者選択 -->
   <select v-model="streamerNico" id="streamerSelect-nico">
@@ -103,11 +105,8 @@
   </select><br>
   <!-- ニコニコ動画のパート数選択 -->
   Part<input type="number" min="1" max="77" value="0" v-model="partNumNico" id="partSelect-nico">
-  <!-- ニコニコ動画のパート数（その他の表記）選択 -->
-  <select>
-    <option value="" selected disabled></option>
-    <option></option>
-  </select>
+  <!-- ニコニコ動画のLASTなどの選択 -->
+  <input type="text" v-model="lastNico" id="lastSelect-nico">
   <!-- ニコニコ動画の分選択 -->
   <input type="number" min="0" max="59" value="0" v-model="minuteNico" id="minuteSelect-nico">：
   <!-- ニコニコ動画の秒選択 -->
@@ -209,11 +208,10 @@
   </select><br>
   <!-- YouTubeのパート数選択 -->
   Part<input type="number" min="1" max="77" value="0" v-model="partNumYou" id="partSelect-you">
-  <!-- YouTubeのパート数（その他の表記）選択 -->
-  <select>
-    <option value="" selected disabled></option>
-    <option></option>
-  </select>
+  <!-- YouTubeのLASTなどの選択 -->
+  <input type="text" v-model="lastYou" id="lastSelect-you">
+  <!-- YouTubeの時選択 -->
+  <input type="number" min="0" max="2" value="0" v-model="hourYou" id="hourSelect-you">：
   <!-- YouTubeの分選択 -->
   <input type="number" min="0" max="59" value="0" v-model="minuteYou" id="minuteSelect-you">：
   <!-- YouTubeの秒選択 -->
@@ -227,4 +225,5 @@
   <script src="script.js"></script>
 
 </body>
+
 </html>
