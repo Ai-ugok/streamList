@@ -101,7 +101,7 @@ const YminuteS = document.getElementById('minuteSelect-you');
 const YsecondS = document.getElementById('secondSelect-you');
 
 // ストレージ
-const storage = localStorage;
+const storage = sessionStorage;
 // リロードしたら・・・
 document.addEventListener('DOMContentLoaded', () => {
 
